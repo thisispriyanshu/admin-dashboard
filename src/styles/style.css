@@ -1,0 +1,10 @@
+.list-group a:hover{
+    background-color:#0b2a81;
+    color:white;
+    cursor: pointer;
+}
+
+.list-group a:active{
+    background-color: grey;
+    color:black;
+}
