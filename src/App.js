@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ErrorPage from "./ErrorPage";
 import RedirectPage from "./RedirectPage";
 import Profile from "./Profile";
+import SignUp from "./pages/SignUp";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -14,9 +15,9 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={<RedirectPage setIsLoggedIn={setIsLoggedIn} />}
+            element={<SignUp />}
           />
-          <Route
+          {/* <Route
             path="/:resource"
             element={
               <Home setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} />
@@ -25,10 +26,10 @@ function App() {
           <Route
             path="/profile"
             element={<Profile isLoggedIn={isLoggedIn} />}
-          />
+          /> */}
           <Route path="*" Component={ErrorPage} />
         </Routes>
-      </BrowserRouter>
+          </BrowserRouter>
     </div>
   );
 }
